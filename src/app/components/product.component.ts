@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Product } from '../shared/app.const';
+import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
 
 /**
  * Create a product component that has intuitive UI and UX.
@@ -7,9 +10,9 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-product',
   templateUrl: './product.component.html',
   standalone: true,
+  imports: [IonicModule, CommonModule]
 })
-export class ProductComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
+export class ProductComponent {
+  @Input() productList: Product[] = []
+  constructor() { }
 }

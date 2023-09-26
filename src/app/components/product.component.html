@@ -1,1 +1,6 @@
-Product works!
+<ion-list>
+  <ion-item *ngFor="let p of productList">
+      <ion-label>{{p.name}} - {{p.description}} / {{p.isAvailable ? "Avaliable" : "Not Avaliable"}} -
+          [{{p.category.name}}]</ion-label>
+  </ion-item>
+</ion-list>
